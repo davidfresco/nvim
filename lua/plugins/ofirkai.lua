@@ -1,10 +1,14 @@
-scheme = require("ofirkai").scheme
-require("ofirkai").setup {
-	remove_italics = true,
-	custom_hlgroups = {
-		["@keyword.function"] = { fg = scheme.light_red },
-		["@function.macro"] = { fg = scheme.light_red },
-		["@method"] = { fg = scheme.green },
-		["@function"] = { fg = scheme.green },
-	}
+return {
+	{
+		"ofirgall/ofirkai.nvim",
+		opts = function(_, opts)
+			local scheme = require("ofirkai").scheme
+			scheme.background = "#292823"
+			opts.custom_hlgroups = {
+				LineNr = { fg = scheme.grey },
+				CursorLineNr = { fg = scheme.white },
+				Function = { fg = scheme.aqua },
+			}
+		end,
+	},
 }
