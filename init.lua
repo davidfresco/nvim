@@ -1,13 +1,14 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-local map = vim.keymap.set
-local unmap = vim.keymap.del
-
-unmap("n", "<C-f>")
-map("n", "ge", vim.diagnostic.open_float, { noremap = true })
-map("n", "gR", vim.lsp.buf.rename, { noremap = true })
-map("n", "ff", ":Neotree focus<CR>", { noremap = true })
+vim.keymap.set("n", "ge", vim.diagnostic.open_float, { noremap = true })
+vim.keymap.set("n", "gR", vim.lsp.buf.rename, { noremap = true })
+vim.keymap.set("n", "ff", ":Neotree focus<CR>", { noremap = true })
+-- vim.keymap.set("n", "<C-d>", function()
+-- 	if #vim.api.nvim_tabpage_list_wins(0) > 1 then
+-- 		vim.api.nvim_win_close(0, false)
+-- 	end
+-- end, { noremap = false })
 
 vim.cmd([[
 set nowrap
@@ -16,11 +17,20 @@ set norelativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set mouse=c
+set mouse=a
+
+" set auto folding
+set foldlevelstart=99
+set foldmethod=indent
+
+" bind group comment to Ctrl-/
+map <C-_> gc
+
+" enable ruler at 80 chars
+set colorcolumn=80
+hi ColorColumn guibg=#303030
 
 noremap <C-d> :q<CR>
-noremap } :bnext<CR>
-noremap { :bp<CR>
 ]])
 
 function P(arg)
