@@ -3,7 +3,7 @@ require("config.lazy")
 
 vim.keymap.set("n", "ge", vim.diagnostic.open_float, { noremap = true })
 vim.keymap.set("n", "gR", vim.lsp.buf.rename, { noremap = true })
-vim.keymap.set("n", "ff", ":Neotree focus<CR>", { noremap = true })
+vim.keymap.set("n", "ff", "<Cmd>Neotree focus<CR>", { noremap = true })
 -- vim.keymap.set("n", "<C-d>", function()
 -- 	if #vim.api.nvim_tabpage_list_wins(0) > 1 then
 -- 		vim.api.nvim_win_close(0, false)
@@ -30,7 +30,7 @@ map <C-_> gc
 set colorcolumn=80
 hi ColorColumn guibg=#303030
 
-noremap <C-d> :q<CR>
+noremap <C-d> <Cmd>q<CR>
 ]])
 
 function P(arg)
