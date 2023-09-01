@@ -16,3 +16,8 @@ map("n", "gR", vim.lsp.buf.rename, noremap)
 map("n", "<C-_>", "V<C-_>", remap)
 map("v", "<C-_>", "gc", remap) -- group comment to ctrl-/
 map("n", "<C-d>", "<Cmd>q<CR>", noremap) -- :q to ctrl-d
+
+map("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", noremap)
+map("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", noremap)
+map("n", "<C-k>", "<Cmd>TmuxNavigateUp<CR>", noremap)
+map("n", "<C-l>", "<Cmd>TmuxNavigateRight<CR>", noremap)
