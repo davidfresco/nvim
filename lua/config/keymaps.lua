@@ -21,3 +21,8 @@ map("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", noremap)
 map("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", noremap)
 map("n", "<C-k>", "<Cmd>TmuxNavigateUp<CR>", noremap)
 map("n", "<C-l>", "<Cmd>TmuxNavigateRight<CR>", noremap)
+
+map("i", "<M-h>", "<C-o>h", noremap)
+map("i", "<M-j>", "<C-o>j", noremap)
+map("i", "<M-k>", "<C-o>k", noremap)
+map("i", "<M-l>", "<C-o>l", noremap)
