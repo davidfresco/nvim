@@ -1,6 +1,7 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+require("lazyvim.config.keymaps")
 
 local map = vim.keymap.set
 local noremap = { noremap = true }
@@ -26,3 +27,4 @@ map("i", "<M-h>", "<C-o>h", noremap)
 map("i", "<M-j>", "<C-o>j", noremap)
 map("i", "<M-k>", "<C-o>k", noremap)
 map("i", "<M-l>", "<C-o>l", noremap)
+map("i", "<M-BS>", "<Del>", noremap)
