@@ -4,7 +4,6 @@ return {
 		event = "VeryLazy",
 		opts = {
 			noice = true,
-			bind = true,
 		},
 		config = function(_, opts)
 			require("lsp_signature").setup(opts)
