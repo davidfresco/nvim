@@ -38,3 +38,7 @@ map("i", "<M-BS>", "<Del>", noremap)
 -- highlight and quote word shortcuts
 map("n", "vv", "viw", remap)
 map("v", '"', 'gza"', remap)
+
+-- big scroll keys
+map("n", "<A-k>", "<PageUp>", noremap)
+map("n", "<A-j>", "<PageDown>", noremap)
