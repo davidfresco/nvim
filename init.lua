@@ -16,7 +16,6 @@ set foldmethod=indent
 
 " enable ruler at 80 chars
 set colorcolumn=80
-hi ColorColumn guibg=#2f302a
 
 ]])
 
