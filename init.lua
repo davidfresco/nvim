@@ -1,7 +1,7 @@
 require("config.lazy")
 
 vim.cmd([[
-set nowrap
+set wrap
 set number
 set norelativenumber
 set tabstop=4
