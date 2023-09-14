@@ -1,23 +1,17 @@
 require("config.lazy")
 
-vim.cmd([[
-set wrap
-set number
-set norelativenumber
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set mouse=a
-
-" set auto folding
-set foldlevelstart=99
-set foldmethod=indent
-
-" enable ruler at 80 chars
-set colorcolumn=80
-
-]])
+local opts = vim.opt
+opts.wrap = true
+opts.number = true
+opts.relativenumber = false
+opts.tabstop = 4
+opts.shiftwidth = 4
+opts.softtabstop = 4
+opts.expandtab = true
+opts.mouse = "a"
+opts.foldlevelstart = 99
+opts.foldmethod = "indent"
+opts.colorcolumn = "99"
 
 function P(arg)
 	print(vim.inspect(arg))
