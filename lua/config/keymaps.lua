@@ -1,6 +1,3 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
 require("lazyvim.config.keymaps") -- load default lazyvim maps so they dont get overwritten
 require("noice") -- load noice now so the <C-f> bind doesnt get overwritten
 
@@ -8,9 +5,12 @@ local map = vim.keymap.set
 local noremap = { noremap = true }
 local remap = { remap = true }
 
+-- neotree to ctrl-f (very important !!1!)
 map("n", "<C-f>", "<Cmd>Neotree focus<CR>", noremap)
 
--- some lsp binds
+map("n", "<leader>ut", "<Cmd>TransparentToggle<CR>", { desc = "Toggle background transparency" })
+
+-- some lsp binds from my old nvim config
 map("n", "ge", vim.diagnostic.open_float, noremap)
 map("n", "gR", vim.lsp.buf.rename, noremap)
 
