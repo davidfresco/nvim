@@ -4,6 +4,7 @@ return {
 		config = {
 			ensure_installed = {
 				"bash-language-server",
+				"jedi-language-server",
 			},
 		},
 	},
