@@ -5,6 +5,7 @@ return {
 			ensure_installed = {
 				"bash-language-server",
 				"jedi-language-server",
+				"lua-language-server",
 			},
 		},
 	},
