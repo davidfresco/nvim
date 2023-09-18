@@ -42,3 +42,8 @@ map("v", '"', 'gza"', remap)
 -- big scroll keys
 map("n", "<A-k>", "<PageUp>", noremap)
 map("n", "<A-j>", "<PageDown>", noremap)
+
+-- stylua: ignore
+map("i", "<C-A-k>", function() require("cmp").scroll_docs(5) end, noremap)
+-- stylua: ignore
+map("i", "<C-A-j>", function() require("cmp").scroll_docs(5) end, noremap)
