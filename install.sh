@@ -18,4 +18,6 @@ cd ~/neovim
 git checkout stable
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
+mkdir ~/.config
+git clone https://github.com/davidfresco/nvim ~/.config/nvim
 nvim --headless "+Lazy! sync" +qa
