@@ -17,5 +17,5 @@ git clone https://github.com/neovim/neovim ~/neovim
 cd ~/neovim
 git checkout stable
 make CMAKE_BUILD_TYPE=RelWithDebInfo
-make install
+sudo make install
 nvim --headless "+Lazy! sync" +qa
