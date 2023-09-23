@@ -1,20 +1,25 @@
 #!/bin/bash
 
-extra_deps="git npm"
+build_reqs="ninja-build cmake gcc gcc-c++ make unzip gettext curl base-devel"
+extra_deps="git npm, python3-venv"
 language_servers=("pyright" "jedi-language-server")
 
 if which dnf &>/dev/null; then
-	sudo dnf -y install ninja-build cmake gcc make unzip gettext curl $extra_deps
+	PACKAGE_MANAGER_CMD="dnf install -y"
 elif which apt-get &>/dev/null; then
-	sudo apt-get -y install ninja-build gettext cmake unzip curl python3-venv $extra_deps
+	PACKAGE_MANAGER_CMD="apt-get install -y"
 elif which zypper &>/dev/null; then
-	sudo zypper -y install ninja cmake gcc-c++ gettext-tools curl $extra_deps
+	PACKAGE_MANAGER_CMD="zypper install -y"
 elif which pacman &>/dev/null; then
-	sudo pacman -Sy base-devel cmake unzip ninja curl $extra_deps
+	PACKAGE_MANAGER_CMD="pacman -Sy"
 else
 	echo "unsupported package manager lol" >&2
 	exit 1
 fi
+
+for package in $build_reqs $extra_deps; do
+	sudo $PACKAGE_MANAGER_CMD $package
+done
 
 git clone https://github.com/neovim/neovim ~/neovim
 cd ~/neovim
