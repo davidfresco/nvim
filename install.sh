@@ -1,7 +1,7 @@
 #!/bin/bash
 
 build_reqs="ninja-build cmake gcc gcc-c++ make unzip gettext curl base-devel"
-extra_deps="git npm, python3-venv"
+extra_deps="git npm python3-venv"
 language_servers=("pyright" "jedi-language-server")
 
 if which dnf &>/dev/null; then
