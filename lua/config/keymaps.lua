@@ -18,7 +18,7 @@ map("n", "gR", vim.lsp.buf.rename, noremap)
 map("n", "<C-_>", "V<C-_>", remap)
 map("v", "<C-_>", "gc", remap)
 
-map("n", "<C-d>", "<Cmd>q<CR>", noremap) -- :q to ctrl-d
+map("n", "<C-x>", "<Cmd>q<CR>", noremap) -- :q to ctrl-x
 
 -- tmux navigation keys
 map("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", noremap)
