@@ -12,6 +12,7 @@ opts.mouse = "a"
 opts.foldlevelstart = 99
 opts.foldmethod = "indent"
 opts.colorcolumn = "99"
+opts.list = false
 
 function P(arg)
 	print(vim.inspect(arg))

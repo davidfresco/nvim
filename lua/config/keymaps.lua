@@ -9,6 +9,12 @@ local remap = { remap = true }
 map("n", "<C-f>", "<Cmd>Neotree focus<CR>", noremap)
 
 map("n", "<leader>ut", "<Cmd>TransparentToggle<CR>", { desc = "Toggle background transparency" })
+map("n", "<leader>ug", function()
+	vim.cmd([[
+        IndentBlanklineToggle
+    ]])
+	vim.b.miniindentscope_disable = not vim.b.miniindentscope_disable
+end, { desc = "Toggle indent guides" })
 
 -- some lsp binds from my old nvim config
 map("n", "ge", vim.diagnostic.open_float, noremap)
