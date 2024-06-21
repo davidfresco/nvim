@@ -7,6 +7,7 @@ language_servers=("pyright" "jedi-language-server")
 if which dnf &>/dev/null; then
 	PACKAGE_MANAGER_CMD="dnf install -y"
 elif which apt-get &>/dev/null; then
+	sudo apt update
 	PACKAGE_MANAGER_CMD="apt-get install -y"
 elif which zypper &>/dev/null; then
 	PACKAGE_MANAGER_CMD="zypper install -y"
