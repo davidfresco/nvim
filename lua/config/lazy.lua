@@ -8,24 +8,24 @@ end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
 require("lazy").setup({
-    spec = {
-        { "LazyVim/LazyVim",                                       import = "lazyvim.plugins" },
-        { import = "lazyvim.plugins.extras.editor.symbols-outline" },
-        -- { import = "lazyvim.plugins.extras.lang.typescript" },
-        -- { import = "lazyvim.plugins.extras.lang.json" },
-        { import = "plugins" },
-    },
-    defaults = {
-        lazy = false,
-        version = false,        -- always use the latest git commit
-    },
-    checker = { enabled = false }, -- automatically check for plugin updates
-    performance = {
-        rtp = {
-            disabled_plugins = {
-                "tohtml",
-                "tutor",
-            },
-        },
-    },
+	spec = {
+		{ "LazyVim/LazyVim", import = "lazyvim.plugins" },
+		-- { import = "lazyvim.plugins.extras.editor.symbols-outline" },
+		-- { import = "lazyvim.plugins.extras.lang.typescript" },
+		-- { import = "lazyvim.plugins.extras.lang.json" },
+		{ import = "plugins" },
+	},
+	defaults = {
+		lazy = false,
+		version = false, -- always use the latest git commit
+	},
+	checker = { enabled = false }, -- automatically check for plugin updates
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"tohtml",
+				"tutor",
+			},
+		},
+	},
 })
