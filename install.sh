@@ -5,6 +5,7 @@ extra_deps="git npm python3-venv"
 language_servers=("pyright" "jedi-language-server")
 
 if which dnf &>/dev/null; then
+	sudo dnf update
 	PACKAGE_MANAGER_CMD="dnf install -y"
 elif which apt-get &>/dev/null; then
 	sudo apt update
