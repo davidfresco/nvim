@@ -1,8 +1,10 @@
 return {
-	"neovim/nvim-lspconfig",
-	dependencies = {
-		"williamboman/mason.nvim",
-	},
+    "neovim/nvim-lspconfig",
+    event = "LazyFile",
+    dependencies = {
+      "mason.nvim",
+      { "williamboman/mason-lspconfig.nvim", config = function() end },
+    },
 	opts = {
 		diagnostics = {
 			virtual_text = false,

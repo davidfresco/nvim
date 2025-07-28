@@ -3,7 +3,7 @@ require("config.lazy")
 local opts = vim.opt
 opts.wrap = true
 opts.number = true
-opts.relativenumber = false
+-- opts.relativenumber = false
 opts.tabstop = 4
 opts.shiftwidth = 4
 opts.softtabstop = 4
@@ -14,6 +14,8 @@ opts.foldmethod = "indent"
 opts.colorcolumn = "99"
 opts.list = false
 
+vim.g.snacks_animate = false
+
 function P(arg)
 	print(vim.inspect(arg))
 end
@@ -21,3 +23,4 @@ end
 function TSInspect()
 	P(vim.treesitter.get_captures_at_cursor(0))
 end
+
